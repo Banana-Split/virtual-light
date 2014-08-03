@@ -1,0 +1,252 @@
+body {
+        background: radial-gradient(ellipse at center, #7db9e8 0%,#113056 100%) !important;
+}
+
+table {
+
+    bottom: 0;   
+    left: 0;   
+    margin: auto !important;   
+    position: absolute;   
+    top: 0;   
+}
+
+.logo {
+  position: fixed;
+  font-family: 'Lato', 'sans-serif';
+  font-size: xx-large;
+  font-weight: 800;
+  color: rgba(255,255,255,0.25);
+  right: 20px;
+  bottom: 20px;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}  /* for IE/Mac */
+
+svg {
+  background-color: rgba(255,255,255,0);
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg:not(.active):not(.ctrl) {
+  cursor: crosshair;
+}
+
+button {
+bottom: 0px;
+position: fixed !important;
+margin-left: 42.5% !important;  
+}
+
+path.link {
+  fill: none;
+  stroke: rgba(231,231,231,0.5);
+  stroke-width: 4px;
+  cursor: default;
+}
+
+svg:not(.active):not(.ctrl) path.link {
+  cursor: pointer;
+}
+
+path.link.selected {
+  stroke-dasharray: 10,2;
+}
+
+path.link.dragline {
+  pointer-events: none;
+}
+
+path.link.hidden {
+  stroke-width: 0;
+}
+
+circle.node {
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+circle.node.reflexive {
+  stroke: #000 !important;
+  stroke-width: 2.5px;
+}
+
+text {
+  font: 12px sans-serif;
+  pointer-events: none;
+}
+
+text.id {
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+
+html, body {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                font-family: 'Source Sans Pro', 'sans-serif';
+                font-weight: 200;
+                font-size: xx-large;
+                background: radial-gradient(ellipse at center, rgba(55,55,99,1) 0%,rgba(14,14,14,1) 100%);
+            }
+
+            .tooltip {
+              position: absolute;
+              top: 100px;
+              left: 100px;
+              -moz-border-radius:3px;
+              border-radius: 3px;
+              border: 2px solid #DDD;
+              background: #fff;
+              opacity: 1;
+              color: #000;
+              padding: 10px;
+              width: 300px;
+              font-size: 15px;
+              z-index: 120;
+            }
+            
+            .tooltip .main {
+              text-align: center;
+              padding:0;
+              margin:0;
+            }
+
+            .tooltip p {
+              font-size: 15px;
+            }
+            
+            hr.tooltip-hr {
+              margin:3px 0 3px 0;
+            }
+            
+            .tooltip .title {
+              font-size: 20px;
+              line-height: 24px;
+            }
+             
+            .tooltip .name {
+              font-weight:bold;
+            }
+            
+            .tooltip .image {
+                padding: 15px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                clip-path: circle(50%, 50%, 35%);
+                -webkit-clip-path: circle(50%,50%,35%);
+                clip-path: url("#tooltip-image");
+            }
+
+            #graph {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+
+            #graph svg {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .logo {
+                position: fixed;
+                font-family: 'Lato', 'sans-serif';
+                font-weight: 800;
+                color: rgba(255,255,255,0.25);
+                right: 20px;
+                bottom: 20px;
+            }
+            
+            .active {
+                opacity: 1.0;
+            }
+
+            .inactive {
+                opacity: 0.3;
+            }
+            
+            .focus {
+                opacity: 1.0 !important;
+            }
+
+            .blur {
+                opacity: 0.3 !important;   
+            }
+
+            #who {
+                position: absolute;
+                top: 10px;
+                left: 20px;
+                color: white;
+            }
+
+            #controls {
+                z-index: 5;
+                position: absolute;
+                top: 10px;
+                right: 10px;   
+            }
+
+            #next_link {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                margin-top: -50px;
+                line-height: 100px;
+
+                background: #ccc;
+                opacity: 0.5;
+                color: #444;
+                text-decoration: none;
+            }
+
+            #next_link:hover {
+                opacity: 1.0;
+            }
+
+            .node {
+              cursor: pointer;
+            }
+            
+            .node:hover {
+              stroke: #000;
+              stroke-width: 1.5px;
+            }
+            
+            .node--leaf {
+              fill: white;
+            }
+            
+            .label {
+              font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+              text-anchor: middle;
+              text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+            }
+            
+            .label,
+            .node--root,
+            .node--leaf {
+              pointer-events: none;
+            }

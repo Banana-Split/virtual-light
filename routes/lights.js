@@ -13,18 +13,15 @@ exports.list = function(req, res){
     
     var lightData = lightData.val();
 
-    var author = lightData.author;
+    // var author = lightData.author;
 
     // Convert color (HSV to CSS styling)
 
     res.render('lights', { 
       title     : 'LET THERE BE LIGHT',
       lightData : lightData,
-      author : author
+      // author : author
     });
-
-    console.log("This should be changing")
-    console.log(lightData)
       
 
   }, function (errorObject) {
