@@ -10,9 +10,7 @@ var path = require('path');
 
 var lights = require('./routes/lights');
 
-
 var Firebase = require("firebase");
-
 
 var app = express();
 
@@ -35,54 +33,13 @@ if ('development' == app.get('env')) {
 }
 
 // Routes defined here 
-
-
-
 app.get('/', routes.index);
-app.get('/users', user.list);
 app.get('/lights', lights.list);
 
-
-// var myFireBaseRef = new Firebase("ra.firebaseio.com");
 var myFireBaseRef = new Firebase("ra.firebaseio.com/devices/virtualbulb");
-
-// myFireBaseRef.set({
-//   title: "Hello World!",
-//   author: "Andrew",
-//   colour: {
-//     H: 0,
-//     S: 0,
-//     V: 0,
-//     A: 1,
-//     On: false
-//   }
-// });
-
-// myFireBaseRef.child("alanisawesome").set({
-//   date_of_birth: "June 23, 1912",
-//   full_name: "Alan Turing"
-// });
-// myFireBaseRef.child("gracehop").set({
-//   date_of_birth: "December 9, 1906",
-//   full_name: "Grace Hopper"
-// });
-
-// // Updating
-
-// var hopperRef = myFireBaseRef.child("gracehop");
-// hopperRef.update({
-//   "nickname": "Amazing Grace"
-// });
-
-myFireBaseRef.child("colour").update({"H": 123123});
-
 
 myFireBaseRef.on('value', function(color){
   console.log("I've been changed: ")
-  
-  var colorOutput = color.val();
-
-  console.log(colorOutput)
 });
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -3,7 +3,7 @@ var Firebase = require("firebase");
 
 exports.list = function(req, res){
   
-  // Read from virtualbulb
+  // Read from ra.firebaseio.com/devices/virtualbulb
 
   // Get a reference to our posts
   var postsRef = new Firebase("ra.firebaseio.com/devices/virtualbulb");
