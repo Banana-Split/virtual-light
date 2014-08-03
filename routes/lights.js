@@ -31,9 +31,7 @@ exports.list = function(req, res){
     console.log('The read failed: ' + errorObject.code);
   });
 
-
-
 };
 
-exports.lightsctrl = 
+
 

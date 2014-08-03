@@ -2,6 +2,14 @@ extends layout
 
 block content
   h1= title
-  div #{lightData.author}
-  div {{lightData}}
+  div {{lightData.author}}
+  div H {{lightData.testlight.h}}
+  div S {{lightData.testlight.s}}
+  div B {{lightData.testlight.b}}
+  div A {{lightData.testlight.a}}
+  div On {{lightData.testlight.on}}
+  div {{myStyle}}
+  div(style="width:20px; height:20px; border:1px solid black; background-color: {{myStyle}}")
+  div(ng-style="myStyle")
+
 

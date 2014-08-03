@@ -46,17 +46,17 @@ app.get('/lights', lights.list);
 // var myFireBaseRef = new Firebase("ra.firebaseio.com");
 var myFireBaseRef = new Firebase("ra.firebaseio.com/devices/virtualbulb");
 
-myFireBaseRef.set({
-  title: "Hello World!",
-  author: "Andrew",
-  colour: {
-    H: 0,
-    S: 0,
-    V: 0,
-    A: 1,
-    On: false
-  }
-});
+// myFireBaseRef.set({
+//   title: "Hello World!",
+//   author: "Andrew",
+//   colour: {
+//     H: 0,
+//     S: 0,
+//     V: 0,
+//     A: 1,
+//     On: false
+//   }
+// });
 
 // myFireBaseRef.child("alanisawesome").set({
 //   date_of_birth: "June 23, 1912",
