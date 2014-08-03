@@ -33,8 +33,8 @@ if ('development' == app.get('env')) {
 }
 
 // Routes defined here 
-app.get('/', routes.index);
-app.get('/lights', lights.list);
+app.get('/', lights.list);
+// app.get('/lights', lights.list);
 
 var myFireBaseRef = new Firebase("ra.firebaseio.com/devices/virtualbulb");
 
